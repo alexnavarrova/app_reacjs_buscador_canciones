@@ -1,0 +1,297 @@
+:root {
+    --verde: #00b30c;
+    --gris1: #353537;
+    --gris2: #eaeaeb;
+    --gris3: #777777;
+}
+h1, h2, h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+h2 {
+    font-size: 3rem;
+}
+
+/** Header scroll **/
+.header-scroll {
+    opacity: 0;
+    margin-top: -300px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: white;
+    transition: all .5s ease;
+    border-bottom: 1px solid rgba(0,0,0,.1)
+}
+.header-scroll.activo {
+    margin-top: 0;
+    opacity: 1;
+}
+
+.header-scroll .nav-link {
+    color:#777;
+}
+.header-scroll .btn-outline-success {
+    color: #00b30c;
+}
+.header-scroll .btn-outline-success:hover {
+    color: white;
+}
+
+/* Header */
+.header {
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    min-height: 30rem;
+}
+a.btn-outline-light:hover {
+    color: black!important;
+}
+.header .nav-link,
+.header .nav-link:hover {
+    color: white!important;
+}
+
+.titulo {
+    font-weight: 700;
+}
+.buscador {
+    min-height: 25rem;
+}
+.btn-success {
+    background-color: #1AB26B;
+}
+
+/** Categorias **/
+.categoria p {
+    opacity: 0;
+    padding-top: 30px;
+    transition: all .3s ease;
+}
+.categoria {
+    overflow: hidden;
+    padding-bottom: 60px;
+    height: calc(auto + 30px);
+}
+
+/** Pro **/
+.bg-dark{
+    background-color: #353537!important;
+}
+
+.card {
+    margin-bottom: 1rem;
+}
+.card-title {
+    font-size: 1.2rem;
+}
+
+/** Footer **/
+
+.footer {
+    border-top: 1px solid #eaeaeb;
+}
+.footer h3 {
+    color: #777777;
+    font-size: 1.2rem;
+}
+.footer .nav-link {
+    color: #777777!important;
+    padding: .5rem 0;
+    font-size: 1rem;
+}
+.footer .container-fluid  {
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer .container-fluid > div {
+    justify-content: space-between;
+    flex: 0 0 calc(50% - 1rem);
+    padding: 1rem;
+}
+@media (min-width: 768px) {
+    .footer .container-fluid > div  {
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+}
+
+@media (min-width: 992px) {
+    .footer .container-fluid > div  {
+        flex: 0 1 calc(20%);
+    }
+}
+
+.pagination li.disabled {
+    pointer-events: all;
+}
+
+.pagination li.disabled i {
+    color: silver
+}
+
+.pagination li.active a {
+    background-color: #023768 !important;
+    border-color: #023768 !important;
+    pointer-events: all;
+}
+
+.pagination li.active {
+    pointer-events: all;
+}
+
+
+
+.ipl-progress-indicator.available {
+	opacity: 0
+}
+
+.ipl-progress-indicator {
+	background-color: gray;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	opacity: 0.8;
+	pointer-events: none;
+	-webkit-transition: opacity cubic-bezier(.4, 0, .2, 1) 436ms;
+	-moz-transition: opacity cubic-bezier(.4, 0, .2, 1) 436ms;
+	transition: opacity cubic-bezier(.4, 0, .2, 1) 436ms;
+	z-index: 9999
+}
+
+.insp-logo-frame {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	justify-content: center;
+	-webkit-animation: fadein 436ms;
+	-moz-animation: fadein 436ms;
+	animation: fadein 436ms;
+	height: 98%
+}
+
+.insp-logo-frame-img {
+	width: 112px;
+	height: 112px;
+	-webkit-align-self: center;
+	-moz-align-self: center;
+	align-self: center;
+	border-radius: 50%
+}
+
+.ipl-progress-indicator-head {
+	background-color: #c6dafc;
+	height: 4px;
+	overflow: hidden;
+	position: relative
+}
+
+.ipl-progress-indicator .first-indicator,
+.ipl-progress-indicator .second-indicator {
+	background-color: #056d8b;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	position: absolute;
+	-webkit-transform-origin: left center;
+	-moz-transform-origin: left center;
+	transform-origin: left center;
+	-webkit-transform: scaleX(0);
+	-moz-transform: scaleX(0);
+	transform: scaleX(0)
+}
+
+.ipl-progress-indicator .first-indicator {
+	-webkit-animation: first-indicator 2s linear infinite;
+	-moz-animation: first-indicator 2s linear infinite;
+	animation: first-indicator 2s linear infinite
+}
+
+.ipl-progress-indicator .second-indicator {
+	-webkit-animation: second-indicator 2s linear infinite;
+	-moz-animation: second-indicator 2s linear infinite;
+	animation: second-indicator 2s linear infinite
+}
+
+.ipl-progress-indicator .insp-logo {
+	animation: App-logo-spin infinite 20s linear;
+	border-radius: 50%;
+	-webkit-align-self: center;
+	-moz-align-self: center;
+	align-self: center
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0)
+	}
+	to {
+		transform: rotate(360deg)
+	}
+}
+
+@-webkit-keyframes fadein {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 1
+	}
+}
+
+@-moz-keyframes fadein {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 1
+	}
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 1
+	}
+}
+
+@keyframes first-indicator {
+	0% {
+		transform: translate(0) scaleX(0)
+	}
+	25% {
+		transform: translate(0) scaleX(.5)
+	}
+	50% {
+		transform: translate(25%) scaleX(.75)
+	}
+	75% {
+		transform: translate(100%) scaleX(0)
+	}
+	100% {
+		transform: translate(100%) scaleX(0)
+	}
+}
+
+@keyframes second-indicator {
+	0% {
+		transform: translate(0) scaleX(0)
+	}
+	60% {
+		transform: translate(0) scaleX(0)
+	}
+	80% {
+		transform: translate(0) scaleX(.6)
+	}
+	100% {
+		transform: translate(100%) scaleX(.1)
+	}
+}
+

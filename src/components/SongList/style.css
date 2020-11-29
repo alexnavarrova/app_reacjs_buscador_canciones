@@ -1,0 +1,29 @@
+.img-detail {
+  width: 300px;
+  height: 300px;
+}
+
+.arrow-back-Content {
+  position: absolute;
+  top: 6px;
+  left: 20px;
+  align-items: flex-end;
+  color: silver
+}
+
+.badge-spotify {
+  position: absolute;
+  top: 6px;
+  left: 20px;
+  align-items: flex-end;
+}
+
+.badge-spotify h5 .badge {
+  background-color: black;
+}
+
+.pop {
+  display: flex;
+  flex-direction: column;
+  z-index: 300;
+}
